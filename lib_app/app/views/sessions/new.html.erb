@@ -1,0 +1,21 @@
+<div class="center">
+  <div class="">
+    <strong>Login</strong>
+  </div>
+  <br>
+<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+  <div>
+    <%= f.text_field :email, placeholder: "Email" %>
+  </div>
+  <div>
+    <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+  <br>
+  <%= f.submit "Sign In", class: "btn btn-md btn-primary"  %>
+<% end %>
+
+<br>
+
+<%= link_to "Register", new_user_path, class: "btn btn-md btn-success" %>
+
+</div>
